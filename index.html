@@ -7,70 +7,85 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg: #fdfdfd;
+      --text: #333;
+      --header-bg: #1f2937;
+      --header-text: #fff;
+      --card-bg: #f3f4f6;
+      --border: #3b82f6;
+    }
+    [data-theme="dark"] {
+      --bg: #111827;
+      --text: #f3f4f6;
+      --header-bg: #111827;
+      --header-text: #3b82f6;
+      --card-bg: #1f2937;
+      --border: #2563eb;
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: #fdfdfd;
-      color: #333;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
       padding: 20px;
+      transition: background 0.3s, color 0.3s;
     }
     header {
-      background: #1f2937;
-      color: #fff;
+      background: var(--header-bg);
+      color: var(--header-text);
       padding: 40px 20px;
       text-align: center;
+      position: relative;
     }
-    header h1 {
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      background: var(--border);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      margin-bottom: 15px;
+    }
+    h1 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.1rem;
     }
     section {
-      margin-top: 40px;
       max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 40px auto;
     }
-    h2 {
-      color: #1f2937;
-      margin-bottom: 10px;
-      font-size: 1.8rem;
-    }
-    .project {
-      background: #f3f4f6;
+    .project, .experience {
+      background: var(--card-bg);
       padding: 20px;
       margin-bottom: 20px;
-      border-left: 4px solid #3b82f6;
+      border-left: 4px solid var(--border);
+      transition: all 0.3s ease;
     }
-    .project h3 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-    .project p {
-      margin-bottom: 0;
+    .project:hover, .experience:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
     .chart-container {
-      margin-top: 30px;
+      background: var(--card-bg);
       padding: 20px;
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
       border-radius: 8px;
     }
     footer {
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
+      margin-top: 40px;
       color: #6b7280;
     }
     a {
-      color: #3b82f6;
+      color: var(--border);
       text-decoration: none;
     }
     a:hover {
@@ -79,53 +94,70 @@
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
   <header>
+    <img src="https://raw.githubusercontent.com/aditimishra28/aditimishra28.github.io/main/me.jpg" alt="Aditi Mishra" class="profile-pic">
     <h1>Aditi Mishra</h1>
     <p>AI Agent Developer | Data Scientist | Ex-IBM | Cloud & ML Enthusiast</p>
   </header>
 
   <section>
     <h2>🚀 Featured Projects</h2>
-
     <div class="project">
       <h3>🤖 AI Agent Development</h3>
-      <p>Built small language model-based agents using Hugging Face transformers. Trained with real-world data and deployed on AWS & Azure for startup automation use cases.</p>
+      <p>Developed SLM-powered agents for automation, fine-tuned using Hugging Face Transformers, deployed via AWS/Azure.</p>
     </div>
-
     <div class="project">
       <h3>📊 Fuel Efficiency Predictor</h3>
-      <p>Explored car fuel efficiency using regression and feature engineering. Achieved 90% accuracy by identifying top predictors for miles per gallon (MPG).</p>
+      <p>Performed regression and feature engineering to predict MPG with 90% accuracy using Python & scikit-learn.</p>
     </div>
-
     <div class="project">
-      <h3>🎯 KMeans Clustering Animation</h3>
-      <p>Implemented KMeans from scratch and visualized the clustering process with animated convergence, making machine learning more intuitive and fun.</p>
+      <h3>🎯 KMeans Clustering</h3>
+      <p>Built KMeans from scratch and visualized convergence with animations in Python using matplotlib.</p>
     </div>
-
     <div class="project">
-      <h3>🔐 Secure Password Manager</h3>
-      <p>Developed a three-tier password manager with Flask (backend), JavaScript (browser extension), and an Expo-powered mobile app. Features encrypted storage and smooth UX.</p>
+      <h3>🔐 Password Manager</h3>
+      <p>Created a Flask backend, browser extension & mobile app with encrypted credential storage using Python & JavaScript.</p>
     </div>
   </section>
 
   <section class="chart-container">
-    <h2>📈 Skills Overview</h2>
-    <canvas id="skillsChart" width="400" height="300"></canvas>
+    <h2>📈 Skills Chart</h2>
+    <canvas id="skillsChart"></canvas>
   </section>
 
   <section>
-    <h2>🧠 Skills Snapshot</h2>
-    <p><strong>Languages:</strong> Python, SQL, JavaScript</p>
-    <p><strong>Frameworks:</strong> Hugging Face, TensorFlow, PyTorch, Flask</p>
-    <p><strong>Cloud:</strong> AWS, GCP, Azure</p>
-    <p><strong>Tools:</strong> Docker, Spark, Hadoop, Tableau</p>
+    <h2>💼 Experience</h2>
+    <div class="experience">
+      <h3>Intern — ScaleUp Labs <span style="float:right;">May 2025 – Present</span></h3>
+      <p>AI agent development using Hugging Face, optimized for startup-specific use cases with cloud deployment.</p>
+    </div>
+    <div class="experience">
+      <h3>Data Engineer — IBM <span style="float:right;">Jun 2022 – Aug 2024</span></h3>
+      <p>Optimized data pipelines with Spark, Hadoop, AWS. Improved system latency and scalability.</p>
+    </div>
+    <div class="experience">
+      <h3>AI/ML Lead — Google Developer Student Clubs <span style="float:right;">Sep 2021 – Jun 2022</span></h3>
+      <p>Led projects in Google Cloud for ML solutions and built Tableau dashboards for data storytelling.</p>
+    </div>
   </section>
 
   <section>
-    <h2>📫 Let's Connect</h2>
-    <p>🌐 <a href="https://github.com/aditimishra28" target="_blank">GitHub</a></p>
-    <p>💼 <a href="https://linkedin.com/in/aditimishra-im" target="_blank">LinkedIn</a></p>
-    <p>📬 <a href="mailto:aditi.smile28@gmail.com">aditi.smile28@gmail.com</a></p>
+    <h2>🧠 Technical Skills</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, SQL, Docker, Kubernetes, Git</li>
+      <li><strong>AI/ML:</strong> AI Agent Dev, SLMs/LLMs, Transformers, Hugging Face, TensorFlow, PyTorch</li>
+      <li><strong>Data Analysis:</strong> Pandas, NumPy, SciPy, Seaborn, Matplotlib, Tableau</li>
+      <li><strong>Cloud & DB:</strong> AWS, GCP, Azure, BigQuery, MySQL, Oracle SQL</li>
+      <li><strong>ETL & Analytics:</strong> Data Architecture, Predictive Modeling, Hypothesis Testing</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📬 Let’s Connect</h2>
+    <p><a href="mailto:aditi.smile28@gmail.com">📧 Email</a> | 
+    <a href="https://github.com/aditimishra28" target="_blank">GitHub</a> | 
+    <a href="https://linkedin.com/in/aditimishra-im" target="_blank">LinkedIn</a></p>
   </section>
 
   <footer>
@@ -133,23 +165,25 @@
   </footer>
 
   <script>
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+
     const ctx = document.getElementById('skillsChart').getContext('2d');
     new Chart(ctx, {
       type: 'bar',
       data: {
         labels: ['Python', 'SQL', 'TensorFlow', 'PyTorch', 'Hugging Face', 'AWS', 'Docker'],
         datasets: [{
-          label: 'Proficiency Level',
+          label: 'Proficiency',
           data: [95, 90, 85, 80, 90, 88, 85],
           backgroundColor: '#3b82f6'
         }]
       },
       options: {
         scales: {
-          y: {
-            beginAtZero: true,
-            max: 100
-          }
+          y: { beginAtZero: true, max: 100 }
         }
       }
     });
