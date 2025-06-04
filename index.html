@@ -23,10 +23,16 @@
       --card-bg: #1f2937;
       --border: #2563eb;
     }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
+      line-height: 1.6;
       padding: 20px;
       transition: background 0.3s, color 0.3s;
     }
@@ -36,6 +42,21 @@
       padding: 40px 20px;
       text-align: center;
       position: relative;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.1rem;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      margin-bottom: 15px;
     }
     .toggle-btn {
       position: absolute;
@@ -48,40 +69,46 @@
       cursor: pointer;
       border-radius: 5px;
     }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--border);
-      margin-bottom: 15px;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
     section {
+      margin-top: 40px;
       max-width: 900px;
-      margin: 40px auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 1.8rem;
     }
     .project, .experience {
       background: var(--card-bg);
       padding: 20px;
       margin-bottom: 20px;
       border-left: 4px solid var(--border);
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project:hover, .experience:hover {
       transform: scale(1.02);
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .project h3, .experience h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    .project p, .experience p {
+      margin-bottom: 0;
     }
     .chart-container {
-      background: var(--card-bg);
+      margin-top: 30px;
       padding: 20px;
+      background: var(--card-bg);
+      border: 1px solid #e5e7eb;
       border-radius: 8px;
     }
     footer {
       text-align: center;
-      margin-top: 40px;
+      padding: 30px 20px;
+      font-size: 0.9rem;
       color: #6b7280;
     }
     a {
@@ -96,7 +123,7 @@
 <body>
   <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
   <header>
-    <img src="https://raw.githubusercontent.com/aditimishra28/aditimishra28.github.io/main/me.jpg" alt="Aditi Mishra" class="profile-pic">
+    <img src="https://avatars.githubusercontent.com/u/71034852?v=4" alt="Aditi Mishra" class="profile-pic">
     <h1>Aditi Mishra</h1>
     <p>AI Agent Developer | Data Scientist | Ex-IBM | Cloud & ML Enthusiast</p>
   </header>
@@ -105,59 +132,61 @@
     <h2>🚀 Featured Projects</h2>
     <div class="project">
       <h3>🤖 AI Agent Development</h3>
-      <p>Developed SLM-powered agents for automation, fine-tuned using Hugging Face Transformers, deployed via AWS/Azure.</p>
+      <p>Fine-tuned small language models using Hugging Face transformers. Deployed agents on AWS & Azure for task automation.</p>
     </div>
     <div class="project">
       <h3>📊 Fuel Efficiency Predictor</h3>
-      <p>Performed regression and feature engineering to predict MPG with 90% accuracy using Python & scikit-learn.</p>
+      <p>Used regression and feature engineering to predict MPG with 90% accuracy. Focused on model interpretability.</p>
     </div>
     <div class="project">
-      <h3>🎯 KMeans Clustering</h3>
-      <p>Built KMeans from scratch and visualized convergence with animations in Python using matplotlib.</p>
+      <h3>🎯 KMeans Clustering Animation</h3>
+      <p>Implemented clustering from scratch and visualized the convergence using animation in Python.</p>
     </div>
     <div class="project">
-      <h3>🔐 Password Manager</h3>
-      <p>Created a Flask backend, browser extension & mobile app with encrypted credential storage using Python & JavaScript.</p>
+      <h3>🔐 Secure Password Manager</h3>
+      <p>Built a Flask + JS + Expo password manager with encrypted credential storage and seamless multi-platform authentication.</p>
     </div>
   </section>
 
   <section class="chart-container">
-    <h2>📈 Skills Chart</h2>
-    <canvas id="skillsChart"></canvas>
+    <h2>📈 Skills Overview</h2>
+    <canvas id="skillsChart" width="400" height="300"></canvas>
   </section>
 
   <section>
     <h2>💼 Experience</h2>
     <div class="experience">
-      <h3>Intern — ScaleUp Labs <span style="float:right;">May 2025 – Present</span></h3>
-      <p>AI agent development using Hugging Face, optimized for startup-specific use cases with cloud deployment.</p>
+      <h3>Intern, ScaleUp Labs <span style="float:right; font-weight: normal;">May 2025 – Present</span></h3>
+      <p>Developed SLM-powered agents for startup automation. Fine-tuned with Hugging Face and deployed via cloud platforms.</p>
     </div>
     <div class="experience">
-      <h3>Data Engineer — IBM <span style="float:right;">Jun 2022 – Aug 2024</span></h3>
-      <p>Optimized data pipelines with Spark, Hadoop, AWS. Improved system latency and scalability.</p>
+      <h3>Data Engineer, IBM <span style="float:right; font-weight: normal;">June 2022 – Aug 2024</span></h3>
+      <p>Managed scalable ETL pipelines on AWS using Spark, Hadoop, and SQL. Improved latency and data availability significantly.</p>
     </div>
     <div class="experience">
-      <h3>AI/ML Lead — Google Developer Student Clubs <span style="float:right;">Sep 2021 – Jun 2022</span></h3>
-      <p>Led projects in Google Cloud for ML solutions and built Tableau dashboards for data storytelling.</p>
+      <h3>AI/ML Lead, Google Developer Student Clubs <span style="float:right; font-weight: normal;">Sep 2021 – Jun 2022</span></h3>
+      <p>Led cloud-based ML solutions and ETL workflows. Created dashboards using Tableau to drive decisions.</p>
     </div>
   </section>
 
   <section>
     <h2>🧠 Technical Skills</h2>
-    <ul>
-      <li><strong>Programming:</strong> Python, SQL, Docker, Kubernetes, Git</li>
-      <li><strong>AI/ML:</strong> AI Agent Dev, SLMs/LLMs, Transformers, Hugging Face, TensorFlow, PyTorch</li>
-      <li><strong>Data Analysis:</strong> Pandas, NumPy, SciPy, Seaborn, Matplotlib, Tableau</li>
-      <li><strong>Cloud & DB:</strong> AWS, GCP, Azure, BigQuery, MySQL, Oracle SQL</li>
-      <li><strong>ETL & Analytics:</strong> Data Architecture, Predictive Modeling, Hypothesis Testing</li>
-    </ul>
+<ul>
+  <li><strong>Top AI Agent Dev Skills:</strong> Hugging Face Transformers, LLM Fine-Tuning, Prompt Engineering, Model Deployment on AWS, Tokenization Techniques</li>
+  <li><strong>Top Data Engineering Skills:</strong> Apache Spark, ETL Pipeline Design, SQL Optimization, AWS S3/EC2/Lambda, Hadoop</li>
+  <li><strong>Programming:</strong> Python, SQL, Docker, Kubernetes, Git</li>
+  <li><strong>AI/ML:</strong> AI Agent Dev, SLMs, LLMs, Transformers, Hugging Face, TensorFlow, PyTorch, Scikit-learn</li>
+  <li><strong>Data Analysis:</strong> Pandas, NumPy, SciPy, Seaborn, Matplotlib, Tableau, R</li>
+  <li><strong>Cloud & DB:</strong> AWS, GCP, Azure, BigQuery, MySQL, Oracle SQL</li>
+  <li><strong>Other:</strong> Data Architecture, ETL Pipelines, Predictive Analytics, Hypothesis Testing</li>
+</ul>
   </section>
 
   <section>
-    <h2>📬 Let’s Connect</h2>
-    <p><a href="mailto:aditi.smile28@gmail.com">📧 Email</a> | 
-    <a href="https://github.com/aditimishra28" target="_blank">GitHub</a> | 
-    <a href="https://linkedin.com/in/aditimishra-im" target="_blank">LinkedIn</a></p>
+    <h2>📫 Let's Connect</h2>
+    <p>🌐 <a href="https://github.com/aditimishra28" target="_blank">GitHub</a></p>
+    <p>💼 <a href="https://linkedin.com/in/aditimishra-im" target="_blank">LinkedIn</a></p>
+    <p>📬 <a href="mailto:aditi.smile28@gmail.com">aditi.smile28@gmail.com</a></p>
   </section>
 
   <footer>
@@ -165,28 +194,32 @@
   </footer>
 
   <script>
-    function toggleTheme() {
-      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-
     const ctx = document.getElementById('skillsChart').getContext('2d');
     new Chart(ctx, {
       type: 'bar',
       data: {
         labels: ['Python', 'SQL', 'TensorFlow', 'PyTorch', 'Hugging Face', 'AWS', 'Docker'],
         datasets: [{
-          label: 'Proficiency',
+          label: 'Proficiency Level',
           data: [95, 90, 85, 80, 90, 88, 85],
           backgroundColor: '#3b82f6'
         }]
       },
       options: {
         scales: {
-          y: { beginAtZero: true, max: 100 }
+          y: {
+            beginAtZero: true,
+            max: 100
+          }
         }
       }
     });
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+    }
   </script>
 </body>
 </html>
