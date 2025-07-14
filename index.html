@@ -1,234 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditi Mishra | AI Agent Developer & Data Scientist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    :root {
-      --bg: #fdfdfd;
-      --text: #333;
-      --header-bg: #1f2937;
-      --header-text: #fff;
-      --card-bg: #f3f4f6;
-      --border: #3b82f6;
-    }
-    [data-theme="dark"] {
-      --bg: #111827;
-      --text: #f3f4f6;
-      --header-bg: #111827;
-      --header-text: #3b82f6;
-      --card-bg: #1f2937;
-      --border: #2563eb;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 20px;
-      transition: background 0.3s, color 0.3s;
-    }
-    header {
-      background: var(--header-bg);
-      color: var(--header-text);
-      padding: 40px 20px;
-      text-align: center;
-      position: relative;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.1rem;
-    }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--border);
-      margin-bottom: 15px;
-    }
-    .toggle-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 8px 16px;
-      background: var(--border);
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    section {
-      margin-top: 40px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    h2 {
-      color: var(--text);
-      margin-bottom: 10px;
-      font-size: 1.8rem;
-    }
-    .project, .experience {
-      background: var(--card-bg);
-      padding: 20px;
-      margin-bottom: 20px;
-      border-left: 4px solid var(--border);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project:hover, .experience:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .project h3, .experience h3 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-    .project p, .experience p {
-      margin-bottom: 0;
-    }
-    .chart-container {
-      margin-top: 30px;
-      padding: 20px;
-      background: var(--card-bg);
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-    a {
-      color: var(--border);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditi Mishra | Data Engineer & AI Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
-  <header>
-    <img src="https://raw.githubusercontent.com/aditimishra28/aditimishra28.github.io/main/me.jpg" alt="Aditi Mishra" class="profile-pic">
-    <h1>Aditi Mishra</h1>
-    <p>AI Agent Developer | Data Scientist | Ex-IBM | Cloud & ML Enthusiast</p>
-  </header>
+    <button class="toggle-btn" onclick="dark_mode()">Toggle Mode</button>
+    <header>
+        <img src="https://raw.githubusercontent.com/aditimishra28/aditimishra28.github.io/main/me.jpg" alt="Aditi Mishra" class="profile-pic">
+        <h1>Aditi Mishra</h1>
+        <p>Data Engineer and AI Developer with 3+ years of experience at IBM and ScaleUp Labs, skilled in building scalable data pipelines and fine tuning SLMs and LLMs for real world AI solutions. Proven track record of deploying high performance AI agents on cloud platforms to automate workflows, enhance decision making, and deliver measurable business impact.</p>
+    </header>
 
-  <section>
-  <h2>🚀 Featured Projects</h2>
+    <section>
+        <h2>🚀 Featured Projects</h2>
 
-  <div class="project">
-    <h3>🤖 AI Agent Development</h3>
-    <p>Developed SLM-based AI agents using Hugging Face. Fine-tuned custom models for startup automation workflows and deployed using AWS Lambda & Azure Functions.</p>
-  </div>
+        <div class="project">
+            <h3>AI Email Summarizer Agent</h3>
+            <p>Built an AI email summarizer with OAuth Gmail integration, cutting reading time by 90%. [cite_start]Fine-tuned LLAMA-3 models for abstractive summarization, optimizing parameters and tokenization for low-latency, real-time deployment. [cite: 36, 37]</p>
+            <div class="project-skills">Python, Hugging Face, LLaMA-3</div>
+        </div>
 
-  <div class="project">
-    <h3>🧠 LLM Fine-Tuning Pipeline</h3>
-    <p>Built a scalable LLM fine-tuning pipeline with custom tokenization and dataset pre-processing. Integrated evaluation and checkpoint saving using Transformers and PyTorch.</p>
-  </div>
+        <div class="project">
+            <h3>SLM Agent Fine-Tuning</h3>
+            <p>Fine-tuned TinyLLaMA and Phi-3 models on curated datasets, achieving >85% accuracy for startup AI agents handling diverse automation tasks efficiently. [cite_start]Enabled real-time inference (<1s) in production, powering startup AI applications. [cite: 40, 41]</p>
+            <div class="project-skills">Hugging Face Transformers, TinyLLaMA, Phi-3</div>
+        </div>
 
-  <div class="project">
-    <h3>📊 Fuel Efficiency Predictor</h3>
-    <p>Performed regression analysis on automotive datasets to predict miles-per-gallon (MPG). Enhanced interpretability through feature engineering and data cleaning techniques.</p>
-  </div>
+        <div class="project">
+            <h3>AI Agent Development</h3>
+            <p>Developed SLM-based AI agents using Hugging Face. Fine-tuned custom models for startup automation workflows and deployed using AWS Lambda & Azure Functions.</p>
+            <div class="project-skills">Hugging Face, SLMs, AWS Lambda, Azure Functions</div>
+        </div>
 
-  <div class="project">
-    <h3>🎯 KMeans Clustering Animation</h3>
-    <p>Visualized how centroid-based clustering works using a custom Python implementation of KMeans. Created animations using matplotlib for educational demonstrations.</p>
-  </div>
+        <div class="project">
+            <h3>LLM Fine-Tuning Pipeline</h3>
+            <p>Built a scalable LLM fine-tuning pipeline with custom tokenization and dataset pre-processing. Integrated evaluation and checkpoint saving using Transformers and PyTorch.</p>
+            <div class="project-skills">Transformers, PyTorch, LLMs</div>
+        </div>
+    </section>
 
-  <div class="project">
-    <h3>🔐 Secure Password Manager</h3>
-    <p>Designed a multi-platform password manager integrating Flask backend, Chrome extension, and Expo mobile app. Focused on secure storage and intuitive cross-device UX.</p>
-  </div>
+    <section>
+        <h2>💼 Experience</h2>
+        <div class="experience">
+            <h3>Intern - AI Agent Developer, ScaleUp Labs <span class="duration">May 2025 – Present</span></h3>
+            <ul>
+                [cite_start]<li>Fine tuned Small Language Models to improve response times by 50% and accuracy by up to 80%, selecting the best models for task specific AI agents in production. [cite: 10]</li>
+                [cite_start]<li>Designed and conducted RAG vs RAG + fine tuning experiments, achieving 30% better task performance with automation workflows. [cite: 11]</li>
+                [cite_start]<li>Integrated multimodal AI for real time image captioning, OCR, and reasoning, enabling perception based automation in production systems. [cite: 12]</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <h3>Data Engineer, IBM <span class="duration">June 2022 – August 2024</span></h3>
+            <ul>
+                [cite_start]<li>Optimized ETL pipelines with Hadoop, Spark, and SQL, cutting latency by 25% and boosting data availability by 30%. [cite: 16]</li>
+                [cite_start]<li>Built real-time and batch data solutions on AWS, developing complex SQL queries and data models to integrate diverse sources. [cite: 17]</li>
+                [cite_start]<li>Developed and enhanced secure data exchange systems with API Gateway, SFTP, and Connect Direct, ensuring enterprise data compliance and enabling seamless system integration at scale. [cite: 18]</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <h3>Lead of AI/ML/Data Science, Google <span class="duration">September 2021 – June 2022</span></h3>
+            <ul>
+                [cite_start]<li>Led teams in building data pipelines and machine learning models using Python, SQL, and Google Cloud Platform. [cite: 23]</li>
+                [cite_start]<li>Developed efficient ETL workflows and utilized Tableau for impactful data visualization, enabling data-driven decisions. [cite: 24]</li>
+            </ul>
+        </div>
+    </section>
 
-</section>
-<section class="chart-container">
-    <h2>📈 Skills Overview</h2>
-    <canvas id="skillsChart" width="400" height="300"></canvas>
-  </section>
+    <section>
+        <h2>🧠 Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming & Data Engineering</h4>
+                <ul>
+                    <li>Python, SQL</li>
+                    <li>ETL Pipelines, Hadoop, Apache, Spark</li>
+                    <li>Docker, Kubernetes, Git</li>
+                    <li>Data Architecture, Problem Solving</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>AI & Machine Learning</h4>
+                <ul>
+                    <li>AI Agent Development, Small & Large Language Models</li>
+                    <li>Transformers, Model Pretraining & Fine-Tuning, RAG</li>
+                    <li>Hugging Face, Tensorflow, Pytorch, Scikit-learn</li>
+                    <li>Natural Language Processing (NLP)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Data Analysis & Visualization</h4>
+                <ul>
+                    <li>Pandas, NumPy, SciPy</li>
+                    <li>Matplotlib, Tableau</li>
+                    <li>Predictive Analytics, Regression, Hypothesis Testing</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Cloud & Databases</h4>
+                <ul>
+                    <li>Amazon Web Services (AWS)</li>
+                    <li>Google Cloud Platform (GCP)</li>
+                    <li>Microsoft Azure</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>💼 Experience</h2>
-    <div class="experience">
-      <h3>Intern, ScaleUp Labs <span style="float:right; font-weight: normal;">May 2025 – Present</span></h3>
-      <p>Developed SLM-powered agents for startup automation. Fine-tuned with Hugging Face and deployed via cloud platforms.</p>
-    </div>
-    <div class="experience">
-      <h3>Data Engineer, IBM <span style="float:right; font-weight: normal;">June 2022 – Aug 2024</span></h3>
-      <p>Managed scalable ETL pipelines on AWS using Spark, Hadoop, and SQL. Improved latency and data availability significantly.</p>
-    </div>
-    <div class="experience">
-      <h3>AI/ML Lead, Google Developer Student Clubs <span style="float:right; font-weight: normal;">Sep 2021 – Jun 2022</span></h3>
-      <p>Led cloud-based ML solutions and ETL workflows. Created dashboards using Tableau to drive decisions.</p>
-    </div>
-  </section>
+    <section class="chart-container">
+        <h2>📈 Skills Proficiency</h2>
+        <canvas id="skillsChart" width="400" height="300"></canvas>
+    </section>
 
-  <section>
-    <h2>🧠 Technical Skills</h2>
-<ul>
-  <li><strong>Top AI Agent Dev Skills:</strong> Hugging Face Transformers, LLM Fine-Tuning, Prompt Engineering, Model Deployment on AWS, Conversational AI Design</li>
-  <li><strong>Top Data Engineering Skills:</strong> Apache Spark, ETL Pipeline Design, SQL Optimization, AWS S3/EC2/Lambda, Scalable Data Ingestion</li>
-  <li><strong>Programming:</strong> Python, SQL, Docker, Kubernetes, Git</li>
-  <li><strong>AI/ML:</strong> AI Agent Dev, SLMs, LLMs, Transformers, Hugging Face, Scikit-learn</li>
-  <li><strong>Data Analysis:</strong> Pandas, NumPy, SciPy, Seaborn, Matplotlib, Tableau, R</li>
-  <li><strong>Cloud & DB:</strong> AWS, GCP, Azure, BigQuery, MySQL, Oracle SQL</li>
-  <li><strong>Other:</strong> Data Architecture, ETL Pipelines, Predictive Analytics, Hypothesis Testing</li>
-</ul>
-  </section>
+    <section>
+        <h2>🎓 Education</h2>
+        <div class="education">
+            <h3>Master's, Data Science - Clark University <span class="duration">August 2024 - December 2025</span></h3>
+            [cite_start]<p>GPA: 3.7 [cite: 44, 47, 48]</p>
+        </div>
+        <div class="education">
+            <h3>Bachelor's, Electronics Engineering - Dr. Abdul Kalam Technical University <span class="duration">August 2018 - July 2022</span></h3>
+            [cite_start]<p>GPA: 3.4 [cite: 46, 49, 50]</p>
+        </div>
+    </section>
 
-  <section>
-    <h2>📫 Let's Connect</h2>
-    <p>🌐 <a href="https://github.com/aditimishra28" target="_blank">GitHub</a></p>
-    <p>💼 <a href="https://linkedin.com/in/aditimishra-im" target="_blank">LinkedIn</a></p>
-    <p>📬 <a href="mailto:aditi.smile28@gmail.com">aditi.smile28@gmail.com</a></p>
-  </section>
+    <section>
+        <h2>🏅 Certifications</h2>
+        <ul>
+            [cite_start]<li>Cloud: 30 Days Google Cloud [cite: 29]</li>
+            [cite_start]<li>Apache Spark: Databricks Certified Associate Developer Apache Spark3 [cite: 30]</li>
+            [cite_start]<li>Machine Learning: IBM Machine Learning with Python [cite: 31]</li>
+            [cite_start]<li>AWS Certified Cloud Practitioner [cite: 32]</li>
+        </ul>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Aditi Mishra. Built with 💙 and Python logic.</p>
-  </footer>
+    <section>
+        <h2>📫 Let's Connect</h2>
+        <p>🌐 <a href="https://github.com/aditimishra28" target="_blank">GitHub</a></p>
+        <p>💼 <a href="https://linkedin.com/in/aditimishra-im" target="_blank">LinkedIn</a></p>
+        <p>📬 <a href="mailto:aditi.smile28@gmail.com">aditi.smile28@gmail.com</a></p>
+        <p>💻 <a href="https://aditimishra28.github.io/" target="_blank">Personal Website</a></p>
+    </section>
 
-  <script>
-    const ctx = document.getElementById('skillsChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Python', 'SQL', 'TensorFlow', 'PyTorch', 'Hugging Face', 'AWS', 'Docker'],
-        datasets: [{
-          label: 'Proficiency Level',
-          data: [95, 90, 85, 80, 90, 88, 85],
-          backgroundColor: '#3b82f6'
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100
-          }
+    <footer>
+        <p>&copy; 2025 Aditi Mishra. Built with 💙 and AI.</p>
+    </footer>
+
+    <script src="darkmode.js"></script>
+    <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Python', 'SQL', 'Hugging Face', 'AWS', 'Spark', 'LLMs', 'Docker'],
+                datasets: [{
+                    label: 'Proficiency Level',
+                    data: [95, 90, 92, 88, 85, 90, 80],
+                    backgroundColor: '#6B705C' // A more muted green/brown for charts
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)' // Light grid lines
+                        },
+                        ticks: {
+                            color: '#333' // Darker ticks for readability
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            color: '#333'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333' // Legend color
+                        }
+                    }
+                }
+            }
+        });
+
+        // Update chart colors based on theme
+        function updateChartColors() {
+            const isDarkMode = document.body.classList.contains('dark');
+            const textColor = isDarkMode ? '#f3f4f6' : '#333';
+            const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+            const barColor = isDarkMode ? '#A5A58D' : '#6B705C'; // Different bar color for dark mode
+
+            const chart = Chart.getChart('skillsChart'); // Get the chart instance
+            if (chart) {
+                chart.data.datasets[0].backgroundColor = barColor;
+                chart.options.scales.y.grid.color = gridColor;
+                chart.options.scales.x.grid.color = gridColor;
+                chart.options.scales.y.ticks.color = textColor;
+                chart.options.scales.x.ticks.color = textColor;
+                chart.options.plugins.legend.labels.color = textColor;
+                chart.update();
+            }
         }
-      }
-    });
 
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", newTheme);
-    }
-  </script>
+        // Observe body for dark class changes to update chart
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class' && mutation.target.classList.contains('dark')) {
+                    updateChartColors();
+                } else if (mutation.attributeName === 'class' && !mutation.target.classList.contains('dark')) {
+                    updateChartColors();
+                }
+            });
+        });
+        observer.observe(document.body, { attributes: true });
+
+        // Initial chart color update
+        updateChartColors();
+    </script>
 </body>
 </html>
