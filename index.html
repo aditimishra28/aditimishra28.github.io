@@ -6,74 +6,104 @@
     <title>Aditi Mishra | Data Engineer & AI Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <button class="toggle-btn" onclick="dark_mode()">Toggle Mode</button>
-    <header>
-        <img src="https://raw.githubusercontent.com/aditimishra28/aditimishra28.github.io/main/me.jpg" alt="Aditi Mishra" class="profile-pic">
-        <h1>Aditi Mishra</h1>
-        <p>Data Engineer and AI Developer with 3+ years of experience at IBM and ScaleUp Labs, skilled in building scalable data pipelines and fine tuning SLMs and LLMs for real world AI solutions. Proven track record of deploying high performance AI agents on cloud platforms to automate workflows, enhance decision making, and deliver measurable business impact.</p>
+    <nav class="navbar" id="main-navbar">
+        <div class="nav-left">
+            <a href="#" class="site-title">Aditi Mishra</a>
+        </div>
+        <div class="nav-right">
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Connect</a>
+            <button class="toggle-btn" onclick="dark_mode()">Toggle Mode</button>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <img src="https://raw.githubusercontent.com/aditimishra28/aditimishra28.github.io/main/me.jpg" alt="Aditi Mishra" class="profile-pic" data-aos="fade-up">
+        <h1 data-aos="fade-up" data-aos-delay="100">Aditi Mishra</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Data Engineer and AI Developer with 3+ years of experience at IBM and ScaleUp Labs, skilled in building scalable data pipelines and fine tuning SLMs and LLMs for real world AI solutions. [cite_start]Proven track record of deploying high performance AI agents on cloud platforms to automate workflows, enhance decision making, and deliver measurable business impact. [cite: 4, 5]</p>
     </header>
 
-    <section>
+    <section id="projects">
         <h2>🚀 Featured Projects</h2>
 
-        <div class="project">
+        <div class="project" data-aos="fade-up">
             <h3>AI Email Summarizer Agent</h3>
-            <p>Built an AI email summarizer with OAuth Gmail integration, cutting reading time by 90%. Fine-tuned LLAMA-3 models for abstractive summarization, optimizing parameters and tokenization for low-latency, real-time deployment.</p>
-            <div class="project-skills">Python, Hugging Face, LLaMA-3</div>
+            <p>Built an AI email summarizer with OAuth Gmail integration, cutting reading time by 90%. [cite_start]Fine-tuned LLaMA-3 models for abstractive summarization tasks, optimizing model parameters and tokenization to deliver high-quality summaries with low-latency inference suitable for real-time deployment. [cite: 36, 37]</p>
+            [cite_start]<div class="project-skills">Python, Hugging Face, LLaMA-3 [cite: 35]</div>
+            <div class="project-links">
+                <a href="#" target="_blank" class="btn-link">View Demo</a>
+                <a href="https://github.com/your-repo-link" target="_blank" class="btn-link">GitHub Repo</a>
+            </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
             <h3>SLM Agent Fine-Tuning</h3>
-            <p>Fine-tuned TinyLLaMA and Phi-3 models on curated datasets, achieving >85% accuracy for startup AI agents handling diverse automation tasks efficiently. Enabled real-time inference (<1s) in production, powering startup AI applications.</p>
-            <div class="project-skills">Hugging Face Transformers, TinyLLaMA, Phi-3</div>
+            <p>Fine-tuned TinyLLaMA and Phi-3 models on curated datasets, achieving >85% accuracy for startup AI agents handling diverse automation tasks efficiently. [cite_start]Enabled real-time inference (<1s) in production, powering startup AI applications efficiently. [cite: 40, 41]</p>
+            [cite_start]<div class="project-skills">Hugging Face Transformers, TinyLLaMA, Phi-3 [cite: 39]</div>
+            <div class="project-links">
+                <a href="#" target="_blank" class="btn-link">View Demo</a>
+                <a href="https://github.com/your-repo-link" target="_blank" class="btn-link">GitHub Repo</a>
+            </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="fade-up" data-aos-delay="200">
             <h3>AI Agent Development</h3>
             <p>Developed SLM-based AI agents using Hugging Face. Fine-tuned custom models for startup automation workflows and deployed using AWS Lambda & Azure Functions.</p>
             <div class="project-skills">Hugging Face, SLMs, AWS Lambda, Azure Functions</div>
+            <div class="project-links">
+                <a href="#" target="_blank" class="btn-link">View Demo</a>
+                <a href="https://github.com/your-repo-link" target="_blank" class="btn-link">GitHub Repo</a>
+            </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="fade-up" data-aos-delay="300">
             <h3>LLM Fine-Tuning Pipeline</h3>
             <p>Built a scalable LLM fine-tuning pipeline with custom tokenization and dataset pre-processing. Integrated evaluation and checkpoint saving using Transformers and PyTorch.</p>
             <div class="project-skills">Transformers, PyTorch, LLMs</div>
+            <div class="project-links">
+                <a href="#" target="_blank" class="btn-link">View Demo</a>
+                <a href="https://github.com/your-repo-link" target="_blank" class="btn-link">GitHub Repo</a>
+            </div>
         </div>
     </section>
 
-    <section>
+    <section id="experience">
         <h2>💼 Experience</h2>
-        <div class="experience">
+        <div class="experience" data-aos="fade-right">
             <h3>Intern - AI Agent Developer, ScaleUp Labs <span class="duration">May 2025 – Present</span></h3>
             <ul>
-                <li>Fine tuned Small Language Models to improve response times by 50% and accuracy by up to 80%, selecting the best models for task specific AI agents in production.</li>
-                <li>Designed and conducted RAG vs RAG + fine tuning experiments, achieving 30% better task performance with automation workflows.</li>
-                <li>Integrated multimodal AI for real time image captioning, OCR, and reasoning, enabling perception based automation in production systems.</li>
+                [cite_start]<li>Fine tuned Small Language Models to improve response times by 50% and accuracy by up to 80%, selecting the best models for task specific AI agents in production. [cite: 10]</li>
+                [cite_start]<li>Designed and conducted RAG vs RAG + fine tuning experiments, achieving 30% better task performance with automation workflows. [cite: 11]</li>
+                [cite_start]<li>Integrated multimodal AI for real time image captioning, OCR, and reasoning, enabling perception based automation in production systems. [cite: 12]</li>
             </ul>
         </div>
-        <div class="experience">
+        <div class="experience" data-aos="fade-right" data-aos-delay="100">
             <h3>Data Engineer, IBM <span class="duration">June 2022 – August 2024</span></h3>
             <ul>
-                <li>Optimized ETL pipelines with Hadoop, Spark, and SQL, cutting latency by 25% and boosting data availability by 30%.</li>
-                <li>Built real-time and batch data solutions on AWS, developing complex SQL queries and data models to integrate diverse sources.</li>
-                <li>Developed and enhanced secure data exchange systems with API Gateway, SFTP, and Connect Direct, ensuring enterprise data compliance and enabling seamless system integration at scale.</li>
+                [cite_start]<li>Optimized ETL pipelines with Hadoop, Spark, and SQL, cutting latency by 25% and boosting data availability by 30%. [cite: 16]</li>
+                [cite_start]<li>Built real-time and batch data solutions on AWS, developing complex SQL queries and data models to integrate diverse sources. [cite: 17]</li>
+                [cite_start]<li>Developed and enhanced secure data exchange systems with API Gateway, SFTP, and Connect Direct, ensuring enterprise data compliance and enabling seamless system integration at scale. [cite: 18]</li>
             </ul>
         </div>
-        <div class="experience">
+        <div class="experience" data-aos="fade-right" data-aos-delay="200">
             <h3>Lead of AI/ML/Data Science, Google <span class="duration">September 2021 – June 2022</span></h3>
             <ul>
-                <li>Led teams in building data pipelines and machine learning models using Python, SQL, and Google Cloud Platform.</li>
-                <li>Developed efficient ETL workflows and utilized Tableau for impactful data visualization, enabling data-driven decisions.</li>
+                [cite_start]<li>Led teams in building data pipelines and machine learning models using Python, SQL, and Google Cloud Platform. [cite: 23]</li>
+                [cite_start]<li>Developed efficient ETL workflows and utilized Tableau for impactful data visualization, enabling data-driven decisions. [cite: 24]</li>
             </ul>
         </div>
     </section>
 
-    <section>
+    <section id="skills">
         <h2>🧠 Technical Skills</h2>
         <div class="skills-grid">
-            <div class="skill-category">
+            <div class="skill-category" data-aos="zoom-in">
                 <h4>Programming & Data Engineering</h4>
                 <ul>
                     <li>Python, SQL</li>
@@ -82,7 +112,7 @@
                     <li>Data Architecture, Problem Solving</li>
                 </ul>
             </div>
-            <div class="skill-category">
+            <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
                 <h4>AI & Machine Learning</h4>
                 <ul>
                     <li>AI Agent Development, Small & Large Language Models</li>
@@ -91,7 +121,7 @@
                     <li>Natural Language Processing (NLP)</li>
                 </ul>
             </div>
-            <div class="skill-category">
+            <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
                 <h4>Data Analysis & Visualization</h4>
                 <ul>
                     <li>Pandas, NumPy, SciPy</li>
@@ -99,7 +129,7 @@
                     <li>Predictive Analytics, Regression, Hypothesis Testing</li>
                 </ul>
             </div>
-            <div class="skill-category">
+            <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
                 <h4>Cloud & Databases</h4>
                 <ul>
                     <li>Amazon Web Services (AWS)</li>
@@ -111,34 +141,34 @@
         </div>
     </section>
 
-    <section>
+    <section id="education">
         <h2>🎓 Education</h2>
-        <div class="education">
-            <h3>Master's, Data Science - Clark University <span class="duration">August 2024 - December 2025</span></h3>
-            <p>GPA: 3.7</p>
+        <div class="education" data-aos="fade-left">
+            [cite_start]<h3>Master's, Data Science - Clark University <span class="duration">August 2024 - December 2025</span> [cite: 43, 44, 47]</h3>
+            [cite_start]<p>GPA: 3.7 [cite: 48]</p>
         </div>
-        <div class="education">
-            <h3>Bachelor's, Electronics Engineering - Dr. Abdul Kalam Technical University <span class="duration">August 2018 - July 2022</span></h3>
-            <p>GPA: 3.4</p>
+        <div class="education" data-aos="fade-left" data-aos-delay="100">
+            [cite_start]<h3>Bachelor's, Electronics Engineering - Dr. Abdul Kalam Technical University <span class="duration">August 2018 - July 2022</span> [cite: 45, 46, 49]</h3>
+            [cite_start]<p>GPA: 3.4 [cite: 50]</p>
         </div>
     </section>
 
-    <section>
+    <section id="certifications">
         <h2>🏅 Certifications</h2>
-        <ul>
-            <li>30 Days Google Cloud</li>
-            <li>Databricks Certified Associate Developer Apache Spark3</li>
-            <li>IBM Machine Learning with Python</li>
-            <li>AWS Certified Cloud Practitioner</li>
+        <ul class="certifications-list" data-aos="fade-up">
+            [cite_start]<li>30 Days Google Cloud [cite: 29]</li>
+            [cite_start]<li>Databricks Certified Associate Developer Apache Spark3 [cite: 30]</li>
+            [cite_start]<li>IBM Machine Learning with Python [cite: 31]</li>
+            [cite_start]<li>AWS Certified Cloud Practitioner [cite: 32]</li>
         </ul>
     </section>
 
-    <section>
+    <section id="contact">
         <h2>📫 Let's Connect</h2>
-        <p>🌐 <a href="https://github.com/aditimishra28" target="_blank">GitHub</a></p>
-        <p>💼 <a href="https://linkedin.com/in/aditimishra-im" target="_blank">LinkedIn</a></p>
-        <p>📬 <a href="mailto:aditi.smile28@gmail.com">aditi.smile28@gmail.com</a></p>
-        <p>💻 <a href="https://aditimishra28.github.io/" target="_blank">Personal Website</a></p>
+        <p>🌐 <a href="https://github.com/aditimishra28" target="_blank" data-aos="fade-up" data-aos-delay="50">GitHub</a></p>
+        <p>💼 <a href="https://linkedin.com/in/aditimishra-im" target="_blank" data-aos="fade-up" data-aos-delay="100">LinkedIn</a></p>
+        <p>📬 <a href="mailto:aditi.smile28@gmail.com" data-aos="fade-up" data-aos-delay="150">aditi.smile28@gmail.com</a></p>
+        <p>💻 <a href="https://aditimishra28.github.io/" target="_blank" data-aos="fade-up" data-aos-delay="200">Personal Website</a></p>
     </section>
 
     <footer>
@@ -146,5 +176,23 @@
     </footer>
 
     <script src="darkmode.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            once: true,    // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+        });
+
+        // Add a class to the body when scrolling to make the nav sticky
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('main-navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('sticky-nav');
+            } else {
+                navbar.classList.remove('sticky-nav');
+            }
+        });
+    </script>
 </body>
 </html>
