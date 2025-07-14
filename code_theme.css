@@ -1,6 +1,6 @@
 pre[class*="language-"],
 code[class*="language-"] {
-    color: #d4d4d4;
+    color: #333333; /* Dark grey text for light background */
     font-size: 13px;
     text-shadow: none;
     font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
@@ -24,11 +24,10 @@ code[class*="language-"]::selection,
 pre[class*="language-"] *::selection,
 code[class*="language-"] *::selection {
     text-shadow: none;
-    background: #264F78;
+    background: #ADD8E6; /* Light blue for selection */
 }
 
 @media print {
-
     pre[class*="language-"],
     code[class*="language-"] {
         text-shadow: none;
@@ -39,14 +38,15 @@ pre[class*="language-"] {
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
-    background: #1e1e1e;
+    background: #F8F8F8; /* Light grey background for code blocks */
+    border-radius: .3em; /* Added for consistency with inline code */
 }
 
 :not(pre)>code[class*="language-"] {
     padding: .1em .3em;
     border-radius: .3em;
-    color: #db4c69;
-    background: #1e1e1e;
+    color: #0056B3; /* Dark blue for inline code text */
+    background: #E6F0FA; /* Light blue background for inline code */
 }
 
 /*********************************************************
@@ -57,22 +57,22 @@ pre[class*="language-"] {
 }
 
 .token.doctype .token.doctype-tag {
-    color: #569CD6;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.doctype .token.name {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.comment,
 .token.prolog {
-    color: #6a9955;
+    color: #6A7F8E; /* Blue-grey for comments */
 }
 
 .token.punctuation,
 .language-html .language-css .token.punctuation,
 .language-html .language-javascript .token.punctuation {
-    color: #d4d4d4;
+    color: #555555; /* Darker grey for punctuation */
 }
 
 .token.property,
@@ -83,7 +83,7 @@ pre[class*="language-"] {
 .token.symbol,
 .token.inserted,
 .token.unit {
-    color: #b5cea8;
+    color: #28A745; /* Green for numbers/booleans/tags - common for good contrast */
 }
 
 .token.selector,
@@ -92,7 +92,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.deleted {
-    color: #ce9178;
+    color: #DC3545; /* Red for strings - common for good contrast */
 }
 
 .language-css .token.string.url {
@@ -101,54 +101,54 @@ pre[class*="language-"] {
 
 .token.operator,
 .token.entity {
-    color: #d4d4d4;
+    color: #333333; /* Dark grey for operators */
     background: none;
 }
 
 .token.operator.arrow {
-    color: #569CD6;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.atrule {
-    color: #ce9178;
+    color: #DC3545; /* Red for at-rules */
 }
 
 .token.atrule .token.rule {
-    color: #c586c0;
+    color: #6F42C1; /* Purple for at-rule rules */
 }
 
 .token.atrule .token.url {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.atrule .token.url .token.function {
-    color: #dcdcaa;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.atrule .token.url .token.punctuation {
-    color: #d4d4d4;
+    color: #555555; /* Darker grey */
 }
 
 .token.keyword {
-    color: #569CD6;
+    color: #007BFF; /* Primary blue for keywords */
 }
 
 .token.keyword.module,
 .token.keyword.control-flow {
-    color: #c586c0;
+    color: #6F42C1; /* Purple for control flow */
 }
 
 .token.function,
 .token.function .token.maybe-class-name {
-    color: #dcdcaa;
+    color: #0056B3; /* Dark blue for functions */
 }
 
 .token.regex {
-    color: #d16969;
+    color: #FD7E14; /* Orange for regex */
 }
 
 .token.important {
-    color: #569cd6;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.italic {
@@ -156,80 +156,80 @@ pre[class*="language-"] {
 }
 
 .token.constant {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.class-name,
 .token.maybe-class-name {
-    color: #4ec9b0;
+    color: #007BFF; /* Primary blue for class names */
 }
 
 .token.console {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.parameter {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.interpolation {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.punctuation.interpolation-punctuation {
-    color: #569cd6;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.boolean {
-    color: #569cd6;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.property,
 .token.variable,
 .token.imports .token.maybe-class-name,
 .token.exports .token.maybe-class-name {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.selector {
-    color: #d7ba7d;
+    color: #6F42C1; /* Purple for selectors */
 }
 
 .token.escape {
-    color: #d7ba7d;
+    color: #6F42C1; /* Purple */
 }
 
 .token.tag {
-    color: #569cd6;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.tag .token.punctuation {
-    color: #808080;
+    color: #808080; /* Grey */
 }
 
 .token.cdata {
-    color: #808080;
+    color: #808080; /* Grey */
 }
 
 .token.attr-name {
-    color: #9cdcfe;
+    color: #2196F3; /* Medium blue */
 }
 
 .token.attr-value,
 .token.attr-value .token.punctuation {
-    color: #ce9178;
+    color: #DC3545; /* Red for attribute values */
 }
 
 .token.attr-value .token.punctuation.attr-equals {
-    color: #d4d4d4;
+    color: #333333; /* Dark grey */
 }
 
 .token.entity {
-    color: #569cd6;
+    color: #007BFF; /* Primary blue */
 }
 
 .token.namespace {
-    color: #4ec9b0;
+    color: #007BFF; /* Primary blue */
 }
 
 /*********************************************************
@@ -244,25 +244,25 @@ pre[class*="language-typescript"],
 code[class*="language-typescript"],
 pre[class*="language-tsx"],
 code[class*="language-tsx"] {
-    color: #9cdcfe;
+    color: #0056B3; /* Dark blue for JS/TS */
 }
 
 pre[class*="language-css"],
 code[class*="language-css"] {
-    color: #ce9178;
+    color: #007BFF; /* Primary blue for CSS */
 }
 
 pre[class*="language-html"],
 code[class*="language-html"] {
-    color: #d4d4d4;
+    color: #333333; /* Dark grey for HTML */
 }
 
 .language-regex .token.anchor {
-    color: #dcdcaa;
+    color: #0056B3; /* Dark blue */
 }
 
 .language-html .token.punctuation {
-    color: #808080;
+    color: #808080; /* Grey */
 }
 
 /*********************************************************
@@ -274,7 +274,7 @@ pre[class*="language-"]>code[class*="language-"] {
 }
 
 .line-highlight.line-highlight {
-    background: #f7ebc6;
-    box-shadow: inset 5px 0 0 #f7d87c;
+    background: #E0F2F7; /* Very light blue for line highlight */
+    box-shadow: inset 5px 0 0 #007BFF; /* Primary blue for highlight border */
     z-index: 0;
 }
