@@ -1,26 +1,26 @@
 :root {
-    /* Light Mode Colors */
-    --bg: #F8F7F0; /* Off-white, soft background */
-    --text: #333333; /* Darker text for readability */
-    --header-bg: #E6E6EA; /* Light grey for header */
-    --header-text: #2C3E50; /* Dark blue/grey for header text */
-    --card-bg: #FFFFFF; /* White cards */
-    --border: #6B705C; /* Muted green/brown for accents */
-    --accent-text: #8E9B9A; /* Soft grey-green for accents */
-    --link-color: #6B705C; /* Accent color for links */
+    /* Light Mode Colors (Blue & White) */
+    --bg: #FFFFFF; /* Pure white background */
+    --text: #333333; /* Dark grey text */
+    --header-bg: #E6F0FA; /* Light blue for header */
+    --header-text: #0056B3; /* Darker blue for header text */
+    --card-bg: #F8F8F8; /* Off-white cards */
+    --border: #007BFF; /* Primary blue for accents */
+    --accent-text: #555555; /* Medium grey for secondary text */
+    --link-color: #007BFF; /* Primary blue for links */
     --shadow-color: rgba(0, 0, 0, 0.08); /* Light shadow */
 }
 
 body.dark {
-    /* Dark Mode Colors */
-    --bg: #1A1A1A; /* Very dark grey background */
-    --text: #E0E0E0; /* Light grey text */
-    --header-bg: #2C2C2C; /* Darker grey for header */
-    --header-text: #A5A58D; /* Lighter green/brown for header text */
-    --card-bg: #2A2A2A; /* Darker grey cards */
-    --border: #A5A58D; /* Lighter green/brown for accents */
-    --accent-text: #C1C1C1; /* Lighter grey for accents */
-    --link-color: #A5A58D; /* Accent color for links */
+    /* Dark Mode Colors (Dark Blue & Grey) */
+    --bg: #1A202C; /* Dark charcoal blue background */
+    --text: #E2E8F0; /* Light grey text */
+    --header-bg: #2D3748; /* Slightly lighter dark blue for header */
+    --header-text: #63B3ED; /* Sky blue for header text */
+    --card-bg: #2D3748; /* Darker blue-grey cards */
+    --border: #63B3ED; /* Sky blue for accents */
+    --accent-text: #A0AEC0; /* Light blue-grey for secondary text */
+    --link-color: #63B3ED; /* Sky blue for links */
     --shadow-color: rgba(0, 0, 0, 0.3); /* Darker shadow */
 }
 
@@ -71,7 +71,7 @@ header p {
     object-fit: cover;
     border: 4px solid var(--border);
     margin-bottom: 20px;
-    box-shadow: 0 0 0 7px rgba(107, 112, 92, 0.2); /* Soft outline */
+    box-shadow: 0 0 0 7px rgba(0, 123, 255, 0.2); /* Soft outline, based on primary blue */
 }
 
 .toggle-btn {
@@ -196,15 +196,7 @@ h2 {
     color: var(--text);
 }
 
-.chart-container {
-    margin-top: 50px;
-    padding: 30px;
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px var(--shadow-color);
-    transition: background 0.5s ease;
-    text-align: center;
-}
+/* Removed chart-container styling as it's no longer present */
 
 footer {
     text-align: center;
