@@ -6,7 +6,6 @@
     <title>Aditi Mishra | Data Engineer & AI Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <button class="toggle-btn" onclick="dark_mode()">Toggle Mode</button>
@@ -21,13 +20,13 @@
 
         <div class="project">
             <h3>AI Email Summarizer Agent</h3>
-            <p>Built an AI email summarizer with OAuth Gmail integration, cutting reading time by 90%. [cite_start]Fine-tuned LLAMA-3 models for abstractive summarization, optimizing parameters and tokenization for low-latency, real-time deployment. [cite: 36, 37]</p>
+            <p>Built an AI email summarizer with OAuth Gmail integration, cutting reading time by 90%. Fine-tuned LLAMA-3 models for abstractive summarization, optimizing parameters and tokenization for low-latency, real-time deployment.</p>
             <div class="project-skills">Python, Hugging Face, LLaMA-3</div>
         </div>
 
         <div class="project">
             <h3>SLM Agent Fine-Tuning</h3>
-            <p>Fine-tuned TinyLLaMA and Phi-3 models on curated datasets, achieving >85% accuracy for startup AI agents handling diverse automation tasks efficiently. [cite_start]Enabled real-time inference (<1s) in production, powering startup AI applications. [cite: 40, 41]</p>
+            <p>Fine-tuned TinyLLaMA and Phi-3 models on curated datasets, achieving >85% accuracy for startup AI agents handling diverse automation tasks efficiently. Enabled real-time inference (<1s) in production, powering startup AI applications.</p>
             <div class="project-skills">Hugging Face Transformers, TinyLLaMA, Phi-3</div>
         </div>
 
@@ -49,24 +48,24 @@
         <div class="experience">
             <h3>Intern - AI Agent Developer, ScaleUp Labs <span class="duration">May 2025 – Present</span></h3>
             <ul>
-                [cite_start]<li>Fine tuned Small Language Models to improve response times by 50% and accuracy by up to 80%, selecting the best models for task specific AI agents in production. [cite: 10]</li>
-                [cite_start]<li>Designed and conducted RAG vs RAG + fine tuning experiments, achieving 30% better task performance with automation workflows. [cite: 11]</li>
-                [cite_start]<li>Integrated multimodal AI for real time image captioning, OCR, and reasoning, enabling perception based automation in production systems. [cite: 12]</li>
+                <li>Fine tuned Small Language Models to improve response times by 50% and accuracy by up to 80%, selecting the best models for task specific AI agents in production.</li>
+                <li>Designed and conducted RAG vs RAG + fine tuning experiments, achieving 30% better task performance with automation workflows.</li>
+                <li>Integrated multimodal AI for real time image captioning, OCR, and reasoning, enabling perception based automation in production systems.</li>
             </ul>
         </div>
         <div class="experience">
             <h3>Data Engineer, IBM <span class="duration">June 2022 – August 2024</span></h3>
             <ul>
-                [cite_start]<li>Optimized ETL pipelines with Hadoop, Spark, and SQL, cutting latency by 25% and boosting data availability by 30%. [cite: 16]</li>
-                [cite_start]<li>Built real-time and batch data solutions on AWS, developing complex SQL queries and data models to integrate diverse sources. [cite: 17]</li>
-                [cite_start]<li>Developed and enhanced secure data exchange systems with API Gateway, SFTP, and Connect Direct, ensuring enterprise data compliance and enabling seamless system integration at scale. [cite: 18]</li>
+                <li>Optimized ETL pipelines with Hadoop, Spark, and SQL, cutting latency by 25% and boosting data availability by 30%.</li>
+                <li>Built real-time and batch data solutions on AWS, developing complex SQL queries and data models to integrate diverse sources.</li>
+                <li>Developed and enhanced secure data exchange systems with API Gateway, SFTP, and Connect Direct, ensuring enterprise data compliance and enabling seamless system integration at scale.</li>
             </ul>
         </div>
         <div class="experience">
             <h3>Lead of AI/ML/Data Science, Google <span class="duration">September 2021 – June 2022</span></h3>
             <ul>
-                [cite_start]<li>Led teams in building data pipelines and machine learning models using Python, SQL, and Google Cloud Platform. [cite: 23]</li>
-                [cite_start]<li>Developed efficient ETL workflows and utilized Tableau for impactful data visualization, enabling data-driven decisions. [cite: 24]</li>
+                <li>Led teams in building data pipelines and machine learning models using Python, SQL, and Google Cloud Platform.</li>
+                <li>Developed efficient ETL workflows and utilized Tableau for impactful data visualization, enabling data-driven decisions.</li>
             </ul>
         </div>
     </section>
@@ -112,30 +111,25 @@
         </div>
     </section>
 
-    <section class="chart-container">
-        <h2>📈 Skills Proficiency</h2>
-        <canvas id="skillsChart" width="400" height="300"></canvas>
-    </section>
-
     <section>
         <h2>🎓 Education</h2>
         <div class="education">
             <h3>Master's, Data Science - Clark University <span class="duration">August 2024 - December 2025</span></h3>
-            [cite_start]<p>GPA: 3.7 [cite: 44, 47, 48]</p>
+            <p>GPA: 3.7</p>
         </div>
         <div class="education">
             <h3>Bachelor's, Electronics Engineering - Dr. Abdul Kalam Technical University <span class="duration">August 2018 - July 2022</span></h3>
-            [cite_start]<p>GPA: 3.4 [cite: 46, 49, 50]</p>
+            <p>GPA: 3.4</p>
         </div>
     </section>
 
     <section>
         <h2>🏅 Certifications</h2>
         <ul>
-            [cite_start]<li>Cloud: 30 Days Google Cloud [cite: 29]</li>
-            [cite_start]<li>Apache Spark: Databricks Certified Associate Developer Apache Spark3 [cite: 30]</li>
-            [cite_start]<li>Machine Learning: IBM Machine Learning with Python [cite: 31]</li>
-            [cite_start]<li>AWS Certified Cloud Practitioner [cite: 32]</li>
+            <li>30 Days Google Cloud</li>
+            <li>Databricks Certified Associate Developer Apache Spark3</li>
+            <li>IBM Machine Learning with Python</li>
+            <li>AWS Certified Cloud Practitioner</li>
         </ul>
     </section>
 
@@ -152,83 +146,5 @@
     </footer>
 
     <script src="darkmode.js"></script>
-    <script>
-        const ctx = document.getElementById('skillsChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Python', 'SQL', 'Hugging Face', 'AWS', 'Spark', 'LLMs', 'Docker'],
-                datasets: [{
-                    label: 'Proficiency Level',
-                    data: [95, 90, 92, 88, 85, 90, 80],
-                    backgroundColor: '#6B705C' // A more muted green/brown for charts
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)' // Light grid lines
-                        },
-                        ticks: {
-                            color: '#333' // Darker ticks for readability
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        ticks: {
-                            color: '#333'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: '#333' // Legend color
-                        }
-                    }
-                }
-            }
-        });
-
-        // Update chart colors based on theme
-        function updateChartColors() {
-            const isDarkMode = document.body.classList.contains('dark');
-            const textColor = isDarkMode ? '#f3f4f6' : '#333';
-            const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
-            const barColor = isDarkMode ? '#A5A58D' : '#6B705C'; // Different bar color for dark mode
-
-            const chart = Chart.getChart('skillsChart'); // Get the chart instance
-            if (chart) {
-                chart.data.datasets[0].backgroundColor = barColor;
-                chart.options.scales.y.grid.color = gridColor;
-                chart.options.scales.x.grid.color = gridColor;
-                chart.options.scales.y.ticks.color = textColor;
-                chart.options.scales.x.ticks.color = textColor;
-                chart.options.plugins.legend.labels.color = textColor;
-                chart.update();
-            }
-        }
-
-        // Observe body for dark class changes to update chart
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'class' && mutation.target.classList.contains('dark')) {
-                    updateChartColors();
-                } else if (mutation.attributeName === 'class' && !mutation.target.classList.contains('dark')) {
-                    updateChartColors();
-                }
-            });
-        });
-        observer.observe(document.body, { attributes: true });
-
-        // Initial chart color update
-        updateChartColors();
-    </script>
 </body>
 </html>
