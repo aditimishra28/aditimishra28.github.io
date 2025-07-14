@@ -274,7 +274,7 @@ pre[class*="language-"]>code[class*="language-"] {
 }
 
 .line-highlight.line-highlight {
-    background: #E0F2F7; /* Very light blue for line highlight */
-    box-shadow: inset 5px 0 0 #007BFF; /* Primary blue for highlight border */
+    background: #007BFF; /* Primary blue for line highlight background */
+    box-shadow: inset 5px 0 0 #0056B3; /* A slightly darker blue for the highlight border */
     z-index: 0;
 }
